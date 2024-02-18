@@ -1,12 +1,25 @@
+import { useState } from 'react';
 import  './Navbar.css'
+import { BsMenuButtonWideFill } from "react-icons/bs";
+import { IoIosCloseCircleOutline } from "react-icons/io";
+import MobileNav from './MobileNav/MobileNav';
+
 
 const Navbar = () => {
+
+    const [openMenu, setOpenMenu] = useState(false)
+
+    const toggleMenu =() =>{
+        setOpenMenu(!openMenu)
+    }
+
     return (
-        <div>
+        <>
+            <MobileNav toggleMenu={toggleMenu} isOpen={openMenu}/>
             <nav className='nav-wrapper'>
                 <div className='nav-content'>
                     {/* <img className='logo' src="" alt="" /> */}
-                    <div className='logo'>My Portfolio</div>
+                    <h3 className='logo'>My Portfolio</h3>
                     <ul>
                         <li>
                             <a className='menu-item'>Home</a>
@@ -22,9 +35,14 @@ const Navbar = () => {
                         </li>
                         <button className='contact-btn' onClick={()=>{}}>Hire Me</button>
                     </ul>
+                    <button className='menu-btn' onClick={toggleMenu}>
+                        
+                        {openMenu ? <IoIosCloseCircleOutline style={{fontSize: "1.8rem"}}/> : <BsMenuButtonWideFill style={{fontSize: "1.8rem"}}/>}
+                        {/* <span className={'material-symbols-outlined'} style={{fontSize: "1.8rem"}}>menu</span> */}
+                    </button>
                 </div>
             </nav>
-        </div>
+        </>
     );
 };
 
