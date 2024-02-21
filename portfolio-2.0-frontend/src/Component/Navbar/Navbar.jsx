@@ -22,16 +22,16 @@ const Navbar = () => {
                     <h3 className='logo'>My Portfolio</h3>
                     <ul>
                         <li>
-                            <a className='menu-item'>Home</a>
+                            <a className='menu-item' href="#hero">Home</a>
                         </li>
                         <li>
-                            <a className='menu-item'>Skills</a>
+                            <a className='menu-item' href='#skills'>Skills</a>
                         </li>
                         <li>
-                            <a className='menu-item'>Work Experience</a>
+                            <a className='menu-item' href='#projects'>My Projects</a>
                         </li>
                         <li>
-                            <a className='menu-item'>Contact Me</a>
+                            <a className='menu-item' href='#contact'>Contact Me</a>
                         </li>
                         <button className='contact-btn' onClick={()=>{}}>Hire Me</button>
                     </ul>
