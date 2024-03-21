@@ -15,7 +15,7 @@ const Hero = () => {
                 <h2>Hello there! 👋 I'm<br /> Jisan Molla,</h2>
                 <h4>a <span style={{color: 'aquamarine',fontWeight: 'bold'}}>
                     <Typewriter
-                        words={['Web Developer', 'Front End Web Developer', 'Programmer']}
+                        words={['Web Developer', 'Front End Web Developer','MERN Stack Developer','Back End Developer', 'Programmer']}
                         loop={5}
                         cursor
                         cursorStyle='_'
