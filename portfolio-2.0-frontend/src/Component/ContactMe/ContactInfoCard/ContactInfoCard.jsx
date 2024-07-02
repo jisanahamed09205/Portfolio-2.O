@@ -27,8 +27,21 @@ const ContactInfoCard = ({iconUrl,text}) => {
       document.body.removeChild(tempTextArea);
   
       // Show copy confirmation using React Hot Toast
-      toast.success('Text copied to clipboard');
+      toast.success('Email copied to clipboard');
     };
+
+    // New Code
+    const handleOpenLink = () => {
+        window.open(text, '_blank');
+      };
+    
+      const handleClick = () => {
+        if (text.includes('@')) {
+          handleCopyText();
+        } else {
+          handleOpenLink();
+        }
+      };
 
     return (
         <div className='contact-details-card'>
@@ -38,7 +51,7 @@ const ContactInfoCard = ({iconUrl,text}) => {
             <p
                 onMouseEnter={() => { text && (document.body.style.cursor = 'pointer') }}
                 onMouseLeave={() => { text && (document.body.style.cursor = 'default') }}
-                onClick={handleCopyText}
+                onClick={handleClick}
             >
                 {text}
             </p>

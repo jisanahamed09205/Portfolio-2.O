@@ -19,7 +19,7 @@ const Navbar = () => {
             <nav className='nav-wrapper'>
                 <div className='nav-content'>
                     {/* <img className='logo' src="" alt="" /> */}
-                    <h3 className='logo'>My Portfolio</h3>
+                    <h3 className='logo'>Jisan Molla</h3>
                     <ul>
                         <li>
                             <a className='menu-item' href="#hero">Home</a>
@@ -33,7 +33,7 @@ const Navbar = () => {
                         <li>
                             <a className='menu-item' href='#contact'>Contact Me</a>
                         </li>
-                        <button className='contact-btn' onClick={()=>{}}>Hire Me</button>
+                        {/* <button className='contact-btn' onClick={()=>{}}>Hire Me</button> */}
                     </ul>
                     <button className='menu-btn' onClick={toggleMenu}>
                         

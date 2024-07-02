@@ -9,17 +9,26 @@ const ContactForm = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        const firstName = e.target.firstName.value;
-        const lastName = e.target.lastName.value;
-        const email = e.target.email.value;
-        const message = e.target.message.value;
+        const { firstName, lastName, email, message } = e.target.elements;
 
         emailjs.send('service_wghlsus', 'template_ewdxh2i', {
-            firstName,
-            lastName,
-            email,
-            message,
+            firstName: firstName.value,
+            lastName: lastName.value,
+            email: email.value,
+            message: message.value,
         }, 'YL6_OLSzXe5GETMNt')
+
+        // const firstName = e.target.firstName.value;
+        // const lastName = e.target.lastName.value;
+        // const email = e.target.email.value;
+        // const message = e.target.message.value;
+
+        // emailjs.send('service_wghlsus', 'template_ewdxh2i', {
+        //     firstName,
+        //     lastName,
+        //     email,
+        //     message,
+        // }, 'YL6_OLSzXe5GETMNt')
         .then((response) => {
             toast.success('Your email has been sent successfully!');
             e.target.reset(); // Clear form fields
